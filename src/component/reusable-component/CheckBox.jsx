@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CheckBox({ name, handelCheckBox}) {
+export default function CheckBox({ name, handelCheckBox }) {
   return (
     <div className="form-check">
       <input

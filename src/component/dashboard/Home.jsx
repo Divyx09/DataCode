@@ -12,17 +12,15 @@ export class Home extends Component {
 
   handleDetails = (val) => {
     this.setState({ details: val });
+    alert("Parent state updated by child component");
   };
   render() {
     return (
       <>
-        <div className="d-flex justify-content-around">
-          <div>
-            <Myform handleDetails={this.handleDetails} />
-          </div>
-          <div>
-            <DetailTable details={this.state.details}/>
-          </div>
+        <div>
+          {/* Calling child component */}
+          {/* Passing props to child component */}
+          <Myform handleDetails={this.handleDetails} />
         </div>
       </>
     );
