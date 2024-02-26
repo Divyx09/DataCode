@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function RadioButton({ handleRadioButton, name }) {
+export default function RadioButton({ handleRadioButton, name, gender }) {
   return (
     <>
       <div className="form-check">
@@ -11,6 +11,7 @@ export default function RadioButton({ handleRadioButton, name }) {
           id="flexRadioDefault1"
           value={name}
           required
+          checked={gender === name }
           onChange={handleRadioButton}
         />
         <label className="form-check-label" htmlFor="flexRadioDefault1">

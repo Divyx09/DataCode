@@ -36,6 +36,7 @@ export default function Myform({ handleDetails }) {
     setUserName("");
     setTextArea("");
   };
+
   //This method Handle Submit Event.
   const handleSubmmitEvent = (e) => {
     e.preventDefault();
@@ -53,6 +54,11 @@ export default function Myform({ handleDetails }) {
         ",City: " +
         city
     );
+    setUserName("");
+    setEmail("");
+    setCity("");
+    setTextArea("");
+    setGender("")
   };
   return (
     <>
@@ -98,10 +104,15 @@ export default function Myform({ handleDetails }) {
             </div>
             <label htmlFor="flrxRadioDefault1">Select Your Gender</label>
             {/* Calling Re-Useable Component */}
-            <RadioButton name={"Male"} handleRadioButton={handleRadioButton} />
+            <RadioButton
+              name={"Male"}
+              handleRadioButton={handleRadioButton}
+              gender={gender}
+            />
             <RadioButton
               name={"Female"}
               handleRadioButton={handleRadioButton}
+              gender={gender}
             />
             <div className="mb-3">
               <label
@@ -124,7 +135,10 @@ export default function Myform({ handleDetails }) {
               Which language will you prefer?
             </label>
             {/* Calling Re-Useable Component */}
-            <CheckBox name={"REACT"} handelCheckBox={handelCheckBox} />
+            <CheckBox
+              name={"REACT"}
+              handelCheckBox={handelCheckBox}
+            />
             <CheckBox name={"HTML"} handelCheckBox={handelCheckBox} />
             <CheckBox name={"CSS"} handelCheckBox={handelCheckBox} />
             <label>Select Your Location</label>
