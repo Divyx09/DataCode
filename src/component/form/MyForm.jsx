@@ -58,7 +58,7 @@ export default function Myform({ handleDetails }) {
     setEmail("");
     setCity("");
     setTextArea("");
-    setGender("")
+    setGender("");
   };
   return (
     <>
@@ -135,10 +135,7 @@ export default function Myform({ handleDetails }) {
               Which language will you prefer?
             </label>
             {/* Calling Re-Useable Component */}
-            <CheckBox
-              name={"REACT"}
-              handelCheckBox={handelCheckBox}
-            />
+            <CheckBox name={"REACT"} handelCheckBox={handelCheckBox} />
             <CheckBox name={"HTML"} handelCheckBox={handelCheckBox} />
             <CheckBox name={"CSS"} handelCheckBox={handelCheckBox} />
             <label>Select Your Location</label>
